@@ -3,6 +3,6 @@
     public interface IEnvironmentVariablesHelper
     {
         string? GetCurrentValueFromVariable(string variable);
-        bool SetupVariables(string version);
+        bool SetupVariables(string version, bool forceSetup);
     }
 }

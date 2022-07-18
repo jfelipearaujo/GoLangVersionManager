@@ -9,12 +9,15 @@ namespace GoLangVersionManager
     {
         private readonly IInstallCommand installCommand;
         private readonly IListCommand listCommand;
+        private readonly IUseCommand useCommand;
 
         public App(IInstallCommand installCommand,
-            IListCommand listCommand)
+            IListCommand listCommand,
+            IUseCommand useCommand)
         {
             this.installCommand = installCommand;
             this.listCommand = listCommand;
+            this.useCommand = useCommand;
         }
 
         public async Task<int> RunAsync(string[] args)
@@ -25,7 +28,7 @@ namespace GoLangVersionManager
                 .MapResult(
                     async (InstallOption opt) => await installCommand.RunAsync(opt),
                     async (ListOption opt) => await listCommand.RunAsync(opt),
-                    //async (UseOptions opts) => await RunUseCommand(opts),
+                    async (UseOption opt) => await useCommand.RunAsync(opt),
                     errs => Task.FromResult(1));
 
             Console.WriteLine("Exit code: {0}", exitCode);

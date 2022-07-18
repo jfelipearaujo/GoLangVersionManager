@@ -55,7 +55,7 @@ namespace GoLangVersionManager.Commands
                 return 0; // Skipped with success
             }
 
-            if (!environmentVariablesHelper.SetupVariables(option.Version))
+            if (!environmentVariablesHelper.SetupVariables(option.Version, false))
             {
                 return 1; // Error
             }

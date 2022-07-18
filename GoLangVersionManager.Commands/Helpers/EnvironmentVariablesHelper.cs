@@ -12,12 +12,12 @@ namespace GoLangVersionManager.Commands.Helpers
             this.consoleHelper = consoleHelper;
         }
 
-        public bool SetupVariables(string version)
+        public bool SetupVariables(string version, bool forceSetup)
         {
             var currentGoRoot = GetCurrentValueFromVariable("GOROOT");
             var desiredGoRoot = BaseVariables.GO_ROOT_PATH_FORMAT(version);
 
-            if (string.IsNullOrEmpty(currentGoRoot))
+            if (string.IsNullOrEmpty(currentGoRoot) || forceSetup)
             {
                 // Setup all
                 SetupGoRootVariable(desiredGoRoot);
