@@ -1,32 +1,38 @@
-﻿using CommandLine;
-
+﻿using GoLangVersionManager;
 using GoLangVersionManager.Commands;
-using GoLangVersionManager.Verbs;
+using GoLangVersionManager.Commands.Helpers;
+using GoLangVersionManager.Commands.Interfaces;
+using GoLangVersionManager.Commands.Providers;
+using GoLangVersionManager.Commands.Validators;
 
-var result = Parser.Default.ParseArguments<InstallOptions, ListOptions, UseOptions>(args);
+using Microsoft.Extensions.DependencyInjection;
 
-var exitCode = await result
-    .MapResult(
-        async (InstallOptions opts) => await RunInstallCommand(opts),
-        async (ListOptions opts) => await RunListCommand(opts),
-        async (UseOptions opts) => await RunUseCommand(opts),
-        errs => Task.FromResult(1));
+var serviceCollection = new ServiceCollection();
 
-Console.WriteLine("Exit code: {0}", exitCode);
-
-async Task<int> RunInstallCommand(InstallOptions options)
+serviceCollection.AddHttpClient("golang", client =>
 {
-    var installCommand = new InstallCommand(options);
+    client.BaseAddress = new Uri("https://go.dev");
+});
 
-    return await installCommand.Run();
-}
+serviceCollection.AddSingleton<App>();
 
-async Task<int> RunListCommand(ListOptions options)
-{
-    return 0;
-}
+serviceCollection.AddSingleton<IInstallCommand, InstallCommand>();
 
-async Task<int> RunUseCommand(UseOptions options)
-{
-    return 0;
-}
+serviceCollection.AddSingleton<IVersionValidator, VersionValidator>();
+serviceCollection.AddSingleton<IOperatingSystemValidator, OperatingSystemValidator>();
+
+serviceCollection.AddSingleton<ISystemArchitectureProvider, SystemArchitectureProvider>();
+serviceCollection.AddSingleton<IVersionDownloaderProvider, VersionDownloaderProvider>();
+
+serviceCollection.AddSingleton<ISkipDownloadHelper, SkipDownloadHelper>();
+serviceCollection.AddSingleton<IEnvironmentVariablesHelper, EnvironmentVariablesHelper>();
+serviceCollection.AddSingleton<IUnpackingHelper, UnpackingHelper>();
+serviceCollection.AddSingleton<IConsoleHelper, ConsoleHelper>();
+
+// ---
+
+var serviceProvider = serviceCollection.BuildServiceProvider();
+
+var app = serviceProvider.GetRequiredService<App>();
+
+await app.RunAsync(args);

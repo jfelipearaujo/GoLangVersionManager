@@ -1,8 +1,8 @@
 ﻿using CommandLine;
 
-namespace GoLangVersionManager.Interfaces
+namespace GoLangVersionManager.Common.Interfaces
 {
-    public interface IOptions
+    public interface IOption
     {
         [Option('v', "version",
             Required = true,
