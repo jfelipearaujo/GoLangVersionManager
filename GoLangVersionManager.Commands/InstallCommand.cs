@@ -1,5 +1,5 @@
 ﻿using GoLangVersionManager.Commands.Interfaces;
-using GoLangVersionManager.Common.Interfaces;
+using GoLangVersionManager.Commands.Verbs;
 
 namespace GoLangVersionManager.Commands
 {
@@ -30,7 +30,7 @@ namespace GoLangVersionManager.Commands
             this.unpackingHelper = unpackingHelper;
         }
 
-        public async Task<int> RunAsync(IOption option)
+        public async Task<int> RunAsync(InstallOption option)
         {
             Console.WriteLine("Starting 'install' command...");
 

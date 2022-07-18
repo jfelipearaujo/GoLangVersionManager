@@ -3,8 +3,8 @@ using GoLangVersionManager.Common.Interfaces;
 
 namespace GoLangVersionManager.Commands.Interfaces
 {
-    public interface IInstallCommand
-        : IAppAsyncCommandOption<InstallOption>
+    public interface IListCommand
+        : IAppAsyncCommandOption<ListOption>
     {
     }
 }

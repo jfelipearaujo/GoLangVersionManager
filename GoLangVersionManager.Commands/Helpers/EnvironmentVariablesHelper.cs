@@ -66,7 +66,7 @@ namespace GoLangVersionManager.Commands.Helpers
             return true;
         }
 
-        private string? GetCurrentValueFromVariable(string variable)
+        public string? GetCurrentValueFromVariable(string variable)
         {
             return Environment.GetEnvironmentVariable(variable, EnvironmentVariableTarget.User);
         }

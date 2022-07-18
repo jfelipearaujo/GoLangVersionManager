@@ -1,9 +1,9 @@
 ﻿using CommandLine;
 
-namespace GoLangVersionManager.Verbs
+namespace GoLangVersionManager.Commands.Verbs
 {
     [Verb("list", false, HelpText = "List all installed/downloaded versions of Go Lang")]
-    public class ListOptions
+    public class ListOption
     {
     }
 }

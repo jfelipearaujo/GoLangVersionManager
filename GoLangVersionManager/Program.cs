@@ -17,6 +17,7 @@ serviceCollection.AddHttpClient("golang", client =>
 serviceCollection.AddSingleton<App>();
 
 serviceCollection.AddSingleton<IInstallCommand, InstallCommand>();
+serviceCollection.AddSingleton<IListCommand, ListCommand>();
 
 serviceCollection.AddSingleton<IVersionValidator, VersionValidator>();
 serviceCollection.AddSingleton<IOperatingSystemValidator, OperatingSystemValidator>();

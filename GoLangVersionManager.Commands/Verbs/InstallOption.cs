@@ -2,11 +2,11 @@
 
 using GoLangVersionManager.Common.Interfaces;
 
-namespace GoLangVersionManager.Verbs
+namespace GoLangVersionManager.Commands.Verbs
 {
     [Verb("install", false, HelpText = "Install (or reinstall) a valid version of Go Lang")]
-    public class InstallOptions : IOption
+    public class InstallOption : IOption
     {
-        public string Version { get; set; }
+        public string? Version { get; set; }
     }
 }

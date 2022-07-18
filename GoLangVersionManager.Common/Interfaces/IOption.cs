@@ -7,6 +7,6 @@ namespace GoLangVersionManager.Common.Interfaces
         [Option('v', "version",
             Required = true,
             HelpText = "A valid version of Go Lang")]
-        string Version { get; set; }
+        string? Version { get; set; }
     }
 }

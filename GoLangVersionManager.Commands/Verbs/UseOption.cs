@@ -2,11 +2,11 @@
 
 using GoLangVersionManager.Common.Interfaces;
 
-namespace GoLangVersionManager.Verbs
+namespace GoLangVersionManager.Commands.Verbs
 {
     [Verb("use", false, HelpText = "Use a version of Go Lang")]
-    public class UseOptions : IOption
+    public class UseOption : IOption
     {
-        public string Version { get; set; }
+        public string? Version { get; set; }
     }
 }
