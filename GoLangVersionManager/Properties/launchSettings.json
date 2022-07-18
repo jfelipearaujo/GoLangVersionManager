@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GoLangVersionManager": {
+      "commandName": "Project",
+      "commandLineArgs": "install -v 1.18.4"
+    }
+  }
+}
