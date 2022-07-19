@@ -3,7 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-!/GoLangVersionManager.Installer.*/Release/gvm*.windows-*.msi
+[Rr]elease/*
+!GoLangVersionManager.Installer.*/Release/gvm*.windows-*.msi
+GoLangVersionManager.Installer.*/Release/*.exe
 
 # User-specific files
 *.rsuser
@@ -21,7 +23,6 @@ mono_crash.*
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
 [Rr]eleases/
 x64/
 x86/
