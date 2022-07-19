@@ -105,11 +105,11 @@ namespace GoLangVersionManager.Commands.Helpers
                     .ToList();
 
                 // Check and remove if there is a differente version
-                if (paths.Any(x => x.Contains("C:\\gvm\\") && !x.Equals(goRootBinPath)))
+                if (paths.Any(x => x.Contains(BaseVariables.GVM_PATH) && !x.Equals(goRootBinPath)))
                 {
                     for (int i = 0; i < paths.Count; i++)
                     {
-                        if (paths[i].Contains("C:\\gvm\\"))
+                        if (paths[i].Contains(BaseVariables.GVM_PATH))
                         {
                             paths.RemoveAt(i);
                             i = 0;

@@ -4,11 +4,11 @@ using GoLangVersionManager.Common.Interfaces;
 
 namespace GoLangVersionManager.Commands.Verbs
 {
-    [Verb("install",
+    [Verb("uninstall",
         false,
-        new string[] { "i" },
-        HelpText = "Install (or reinstall) a valid version of Go Lang")]
-    public class InstallOption : IOption
+        new string[] { "un" },
+        HelpText = "Uninstall a version of Go Lang")]
+    public class UninstallOption : IOption
     {
         public string? Version { get; set; }
     }

@@ -173,7 +173,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Go Lang Version Manager"
         "ProductCode" = "8:{A9E370E8-4BC9-4F92-A98A-34A981D81961}"
-        "PackageCode" = "8:{EBCE90D9-A465-4AF5-B586-F03A4184391A}"
+        "PackageCode" = "8:{1DC03995-9A28-4979-88E7-FBDEA1974D86}"
         "UpgradeCode" = "8:{F57E78F8-1528-4842-9079-06C85D2E7D88}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"

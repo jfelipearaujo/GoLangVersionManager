@@ -2,7 +2,7 @@
 {
     public static class BaseVariables
     {
-        private static string BASE_PATH => "C:\\gvm";
+        private static string BASE_PATH => "C:\\ProgramData\\Go Lang Version Manager\\versions";
         private static string GO_BASE_PATH => "{0}\\{1}";
         private static string GO_ROOT_PATH = "{0}\\go";
         private static string GO_ROOT_BIN_PATH = "{0}\\bin";

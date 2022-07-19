@@ -19,6 +19,7 @@ serviceCollection.AddSingleton<App>();
 serviceCollection.AddSingleton<IInstallCommand, InstallCommand>();
 serviceCollection.AddSingleton<IListCommand, ListCommand>();
 serviceCollection.AddSingleton<IUseCommand, UseCommand>();
+serviceCollection.AddSingleton<IUninstallCommand, UninstallCommand>();
 
 serviceCollection.AddSingleton<IVersionValidator, VersionValidator>();
 serviceCollection.AddSingleton<IOperatingSystemValidator, OperatingSystemValidator>();

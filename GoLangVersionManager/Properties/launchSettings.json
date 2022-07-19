@@ -2,7 +2,7 @@
   "profiles": {
     "GoLangVersionManager": {
       "commandName": "Project",
-      "commandLineArgs": "use -v 1.18"
+      "commandLineArgs": "un -v 1.18"
     }
   }
 }
