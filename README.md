@@ -1,14 +1,14 @@
 # Go Lang Version Manager For Windows
 
-This application can manage multiples installations of Go Lang.
+This application can manage multiple golang installations.
 
 How to use:
 
-First of all you should download the correct version for your windows, see the [release](https://github.com/jfelipearaujo/GoLangVersionManager/releases) page.
+Before anything else, you must download the correct version (x64/x86) for your windows, see the [release](https://github.com/jfelipearaujo/GoLangVersionManager/releases) page.
 
-After that, you should add the installation path (C:\ProgramData\Go Lang Version Manager) to your PATH environment variable.
+After downloading the application, run the \*.msi file to start the installation. When finished, add the installation path (C:\ProgramData\Go Lang Version Manager) in the PATH environment variable.
 
-If you type the command bellow:
+If all goes well, open a new prompt and type the command below:
 
 ```
 gvm
