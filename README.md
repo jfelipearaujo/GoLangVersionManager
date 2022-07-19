@@ -4,7 +4,7 @@ This application can manage multiples installations of Go Lang.
 
 How to use:
 
-First of all you should download the correct version for your windows, see release page.
+First of all you should download the correct version for your windows, see the [release](https://github.com/jfelipearaujo/GoLangVersionManager/releases) page.
 
 After that, you should add the installation path (C:\ProgramData\Go Lang Version Manager) to your PATH environment variable.
 
