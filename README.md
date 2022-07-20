@@ -46,22 +46,10 @@ Exit code: 1
 gvm install -v 1.18
 ```
 
-Or
-
-```
-gvm i -v 1.18
-```
-
 # Uninstall a version
 
 ```
 gvm unistall -v 1.18
-```
-
-Or
-
-```
-gvm un -v 1.18
 ```
 
 # List all versions
@@ -70,22 +58,10 @@ gvm un -v 1.18
 gvm list
 ```
 
-Or
-
-```
-gvm l
-```
-
 # Use a version
 
 ```
 gvm use -v 1.18
-```
-
-Or
-
-```
-gvm u -v 1.18
 ```
 
 # Setup GOPATH environment variable
