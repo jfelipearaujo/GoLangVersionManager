@@ -6,7 +6,15 @@ How to use:
 
 Before anything else, you must download the correct version (x64/x86) for your windows, see the [release](https://github.com/jfelipearaujo/GoLangVersionManager/releases) page.
 
-After downloading the application, run the \*.msi file to start the installation. When finished, add the installation path (C:\ProgramData\Go Lang Version Manager) in the PATH environment variable.
+# If you choose the .msi file
+
+After downloading the application, run the \*.msi file to start the installation.
+
+# If you choose the .zip file
+
+After downloading the zip, extract all the content in some folder (like C:\ProgramData\Go Lang Version Manager\).
+
+When finished, add the installation path (C:\ProgramData\Go Lang Version Manager\) in the PATH environment variable.
 
 If all goes well, open a new prompt and type the command below:
 
@@ -17,7 +25,7 @@ gvm
 You should see the following output:
 
 ```
-gvm 1.0.1
+gvm 1.0.3
 Copyright (C) 2022 gvm
 
 ERROR(S):
