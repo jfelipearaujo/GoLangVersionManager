@@ -6,13 +6,13 @@ How to use:
 
 Before anything else, you must download the correct version (x64/x86) for your windows, see the [release](https://github.com/jfelipearaujo/GoLangVersionManager/releases) page.
 
-# If you choose the .msi file
+## If you choose the .msi file
 
-After downloading the application, run the \*.msi file to start the installation.
+Download the .msi installer, run the \*.msi file to start the installation.
 
-# If you choose the .zip file
+## If you choose the .zip file
 
-After downloading the zip, extract all the content in some folder (like C:\ProgramData\Go Lang Version Manager\).
+Download the zip file, extract all the content in some folder (like C:\ProgramData\Go Lang Version Manager\).
 
 When finished, add the installation path (C:\ProgramData\Go Lang Version Manager\) in the PATH environment variable.
 
