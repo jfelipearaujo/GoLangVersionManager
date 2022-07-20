@@ -6,8 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>gvm</AssemblyName>
-    <Configurations>Debug;Release;x64</Configurations>
+    <Configurations>Debug;Release</Configurations>
     <Platforms>AnyCPU;x64;x86</Platforms>
+    <FileVersion>1.0.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

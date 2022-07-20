@@ -2,7 +2,7 @@
   "profiles": {
     "GoLangVersionManager": {
       "commandName": "Project",
-      "commandLineArgs": "un -v 1.18"
+      "commandLineArgs": "gopath -p C:\\go"
     }
   }
 }

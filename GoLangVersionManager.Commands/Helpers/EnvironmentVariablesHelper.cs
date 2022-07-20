@@ -71,15 +71,20 @@ namespace GoLangVersionManager.Commands.Helpers
             return Environment.GetEnvironmentVariable(variable, EnvironmentVariableTarget.User);
         }
 
-        private void SetupGoRootVariable(string value)
+        public void SetupEnvVariable(string message, string variable, string value)
         {
-            Console.Write("Setting GOROOT env variable... ");
+            Console.Write(message);
 
-            Environment.SetEnvironmentVariable("GOROOT",
+            Environment.SetEnvironmentVariable(variable,
                 value,
                 EnvironmentVariableTarget.User);
 
             Console.WriteLine("Done!");
+        }
+
+        private void SetupGoRootVariable(string value)
+        {
+            SetupEnvVariable("Setting GOROOT env variable... ", "GOROOT", value);
         }
 
         private void SetupPathVariable(string version)
@@ -90,13 +95,7 @@ namespace GoLangVersionManager.Commands.Helpers
 
             if (string.IsNullOrEmpty(currentPath))
             {
-                Console.Write("Adding GOROOT\\bin path to the Path... ");
-
-                Environment.SetEnvironmentVariable("Path",
-                    goRootBinPath + ";",
-                    EnvironmentVariableTarget.User);
-
-                Console.WriteLine("Done!");
+                SetupEnvVariable("Adding GOROOT\\bin path to the Path... ", "Path", goRootBinPath + ";");
             }
             else
             {
@@ -124,13 +123,7 @@ namespace GoLangVersionManager.Commands.Helpers
 
                     var newPath = string.Join(";", paths);
 
-                    Console.Write("Adding GOROOT\\bin path to the Path... ");
-
-                    Environment.SetEnvironmentVariable("Path",
-                        newPath,
-                        EnvironmentVariableTarget.User);
-
-                    Console.WriteLine("Done!");
+                    SetupEnvVariable("Adding GOROOT\\bin path to the Path... ", "Path", newPath);
                 }
             }
         }

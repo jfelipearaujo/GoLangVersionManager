@@ -31,13 +31,21 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\gvm1.0.0.windows-x86.msi"
+        "OutputFilename" = "8:Release\\gvm1.0.1.windows-x86.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -47,6 +55,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -134,15 +158,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Go Lang Version Manager"
-        "ProductCode" = "8:{B3483DD0-2C0B-4DFE-9616-B0B59D4259B7}"
-        "PackageCode" = "8:{74CFB738-F5A8-4E32-912D-B9C1C5284B38}"
+        "ProductCode" = "8:{033A44DD-33B3-4C5B-9254-CD966DAA85FF}"
+        "PackageCode" = "8:{3AB43A73-860D-40DC-8DA9-C68886ECA50A}"
         "UpgradeCode" = "8:{8B59CCC7-8A73-473B-AF9D-71F76FACA8DC}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Jose Felipe Araujo"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

@@ -2,7 +2,8 @@
 {
     public interface IEnvironmentVariablesHelper
     {
-        string? GetCurrentValueFromVariable(string variable);
+        void SetupEnvVariable(string message, string variable, string value);
         bool SetupVariables(string version, bool forceSetup);
+        string? GetCurrentValueFromVariable(string variable);
     }
 }
