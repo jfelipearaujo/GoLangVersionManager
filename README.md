@@ -17,7 +17,7 @@ gvm
 You should see the following output:
 
 ```
-gvm 1.0.0
+gvm 1.0.1
 Copyright (C) 2022 gvm
 
 ERROR(S):
@@ -30,6 +30,8 @@ ERROR(S):
   use, u           Use a version of Go Lang
 
   uninstall, un    Uninstall a version of Go Lang
+
+  gopath, gp       Set the GOPATH environment variable
 
   help             Display more information on a specific command.
 
@@ -85,3 +87,19 @@ Or
 ```
 gvm u -v 1.18
 ```
+
+# Setup GOPATH environment variable
+
+This will define the GOPATH as the default one (C:\{userName}\go)
+
+```
+gvm gopath
+```
+
+Or
+
+```
+gvm gopath C:\MyFolder\go
+```
+
+If the selected folder does not have the necessary subfolders (bin, pkg and src) they will be created.
