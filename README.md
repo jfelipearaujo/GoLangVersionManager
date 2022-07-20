@@ -1,4 +1,4 @@
-# Go Lang Version Manager For Windows
+# Go Lang Version Manager for Windows
 
 This application can manage multiple golang installations.
 
