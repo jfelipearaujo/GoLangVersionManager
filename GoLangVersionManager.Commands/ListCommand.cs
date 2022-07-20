@@ -20,7 +20,7 @@ namespace GoLangVersionManager.Commands
         {
             Console.WriteLine("Starting 'list' command...");
 
-            var gvmDirInfo = new DirectoryInfo(BaseVariables.GVM_PATH);
+            var gvmDirInfo = new DirectoryInfo(BaseVariables.BASE_PATH);
 
             if (gvmDirInfo.Exists)
             {
@@ -37,8 +37,7 @@ namespace GoLangVersionManager.Commands
                 }
                 else
                 {
-                    var currentGoRootBinPath = environmentVariablesHelper.GetCurrentValueFromVariable("GOROOT");
-                    var currentGoVersion = string.IsNullOrEmpty(currentGoRootBinPath) ? null : currentGoRootBinPath.Split('\\')[2];
+                    var currentGoVersion = environmentVariablesHelper.GetCurrentValueFromVariable("GVM_CURRENT_GO_VERSION");
 
                     Console.WriteLine("Installed versions:");
 

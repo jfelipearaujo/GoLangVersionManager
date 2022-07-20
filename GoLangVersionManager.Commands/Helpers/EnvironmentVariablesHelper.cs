@@ -96,6 +96,8 @@ namespace GoLangVersionManager.Commands.Helpers
             if (string.IsNullOrEmpty(currentPath))
             {
                 SetupEnvVariable("Adding GOROOT\\bin path to the Path... ", "Path", goRootBinPath + ";");
+
+                SetupEnvVariable("Updating current go version... ", "GVM_CURRENT_GO_VERSION", version);
             }
             else
             {
@@ -104,11 +106,11 @@ namespace GoLangVersionManager.Commands.Helpers
                     .ToList();
 
                 // Check and remove if there is a differente version
-                if (paths.Any(x => x.Contains(BaseVariables.GVM_PATH) && !x.Equals(goRootBinPath)))
+                if (paths.Any(x => x.Contains(BaseVariables.BASE_PATH) && !x.Equals(goRootBinPath)))
                 {
                     for (int i = 0; i < paths.Count; i++)
                     {
-                        if (paths[i].Contains(BaseVariables.GVM_PATH))
+                        if (paths[i].Contains(BaseVariables.BASE_PATH))
                         {
                             paths.RemoveAt(i);
                             i = 0;
@@ -124,6 +126,8 @@ namespace GoLangVersionManager.Commands.Helpers
                     var newPath = string.Join(";", paths);
 
                     SetupEnvVariable("Adding GOROOT\\bin path to the Path... ", "Path", newPath);
+
+                    SetupEnvVariable("Updating current go version... ", "GVM_CURRENT_GO_VERSION", version);
                 }
             }
         }

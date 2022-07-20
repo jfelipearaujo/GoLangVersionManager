@@ -29,7 +29,7 @@ namespace GoLangVersionManager.Commands
                 return Task.FromResult(0); // Error
             }
 
-            var gvmDirInfo = new DirectoryInfo(BaseVariables.GVM_PATH);
+            var gvmDirInfo = new DirectoryInfo(BaseVariables.BASE_PATH);
 
             if (gvmDirInfo.Exists)
             {
