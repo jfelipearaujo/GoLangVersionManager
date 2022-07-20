@@ -38,6 +38,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -45,7 +53,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\gvm1.0.1.windows-x86.msi"
+        "OutputFilename" = "8:Release\\gvm1.0.2.windows-x86.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -121,7 +129,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_9C05AA609AFA4B6EBD812CD65C2D6052"
             {
-            "DefaultLocation" = "8:[CommonAppDataFolder]\\[ProductName]"
+            "DefaultLocation" = "8:[CommonAppDataFolder]\\[ProductName]\\bin"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
@@ -158,15 +166,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Go Lang Version Manager"
-        "ProductCode" = "8:{033A44DD-33B3-4C5B-9254-CD966DAA85FF}"
-        "PackageCode" = "8:{3AB43A73-860D-40DC-8DA9-C68886ECA50A}"
+        "ProductCode" = "8:{BD88A0DA-72EC-4FD1-8103-0C7853D11192}"
+        "PackageCode" = "8:{FB6C9675-EC42-480A-8D31-B98C69D64CDE}"
         "UpgradeCode" = "8:{8B59CCC7-8A73-473B-AF9D-71F76FACA8DC}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:Jose Felipe Araujo"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
